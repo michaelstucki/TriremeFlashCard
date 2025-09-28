@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox stylesheets="@../css/styles.css" alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.michaelstucki.triremeflashcards.controller.ControllerHome">
+    <padding>
+        <Insets right="20.0" bottom="100.0" left="20.0" />
+    </padding>
+
+    <ImageView fitWidth="180" fitHeight="180" preserveRatio="true">
+        <Image url="@../images/trireme.png"/>
+    </ImageView>
+
+    <Label fx:id="pageTitle" text="home"/>
+    <TextField fx:id="username" promptText="Username" focusTraversable="false"/>
+
+    <StackPane>
+        <PasswordField fx:id="passwordField" promptText="Password" focusTraversable="false"/>
+        <TextField fx:id="password" visible="false" />
+        <ImageView fx:id="eyeIcon" fitHeight="25" fitWidth="25" StackPane.alignment="CENTER_RIGHT"
+                   onMouseClicked="#togglePasswordVisibility">
+            <Image url="@../images/eye_closed.jpg" />
+        </ImageView>
+    </StackPane>
+
+    <Button text="Sign In" onAction="#signInClick"/>
+
+    <VBox alignment="CENTER" spacing="5">
+        <Hyperlink text="create account" onAction="#createAccountClick"/>
+        <Hyperlink text="forgot password" onAction="#forgotPasswordClick"/>
+        <Hyperlink text="exit" onAction="#exitClick" fx:id="exit"/>
+    </VBox>
+
+    <Label fx:id="userMessage"/>
+</VBox>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+
+<VBox stylesheets="@../css/styles.css" alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.michaelstucki.triremeflashcards.controller.ControllerDecks">
+    <padding>
+        <Insets right="200.0" bottom="100.0" left="200.0" />
+    </padding>
+
+    <ImageView fitWidth="180" fitHeight="180" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+        <Image url="@../images/trireme.png"/>
+    </ImageView>
+
+    <Label text="decks"/>
+
+    <ListView fx:id="decksView" layoutX="10.0" layoutY="10.0">
+        <tooltip><Tooltip text="Right-click to Open, Delete, or Drill. Double-click to Rename."/></tooltip>
+        <ContextMenu fx:id="itemContextMenu">
+            <items>
+                <MenuItem fx:id="open" text="open"/>
+                <MenuItem fx:id="delete" text="delete"/>
+                <MenuItem fx:id="drill" text="drill"/>
+            </items>
+        </ContextMenu>
+    </ListView>
+
+    <HBox alignment="CENTER" spacing="10">
+        <TextField fx:id="deckName" promptText="deck title" focusTraversable="false" onAction="#addDeck"/>
+        <Button text="Add" onAction="#addDeck"/>
+    </HBox>
+
+    <Label fx:id="userMessage"/>
+    <VBox alignment="CENTER" spacing="5">
+        <Hyperlink text="welcome" onAction="#welcomeClick"/>
+        <Hyperlink text="logout" onAction="#logoutClick"/>
+        <Hyperlink text="exit" onAction="#exitClick"/>
+    </VBox>
+</VBox>

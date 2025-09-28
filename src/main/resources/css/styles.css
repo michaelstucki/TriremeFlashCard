@@ -1,0 +1,96 @@
+
+.root {
+    -fx-font-size: 18px;
+    -fx-font-family: 'Herculanum LT Pro Roman';
+}
+
+.hyperlink {
+    -fx-text-fill: grey;
+    -fx-underline: false;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #002642;
+}
+
+.button:hover {
+    -fx-background-color: #002642;
+}
+
+.button {
+    -fx-font-family: 'EB Garamond';
+    -fx-font-size: 14px;
+    -fx-background-color: grey;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+#pass:hover {
+    -fx-background-color: green;
+}
+
+#fail:hover {
+    -fx-background-color: red;
+}
+
+.text-field:hover {
+    -fx-border-color: #002642;
+}
+
+#pageTitle {
+    -fx-font-size: 24px;
+}
+
+.text-field, .password-field .prompt-field, StackPane {
+    -fx-font-family: 'EB Garamond';
+    -fx-text-fill: grey;
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+    -fx-pref-width: 250px;
+    -fx-max-width: 250px;
+    -fx-min-width: 250px;
+}
+
+.prompt-label {
+    -fx-font-family: 'EB Garamond';
+    -fx-text-fill: black;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+#userMessage {
+    -fx-font-family: 'EB Garamond';
+    -fx-text-fill: red;
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+}
+
+.tooltip {
+    -fx-font-family: 'EB Garamond';
+    -fx-font-size: 12px;
+    -fx-background-color: lightgoldenrodyellow;
+    -fx-text-fill: darkslategray;
+    -fx-border-color: goldenrod;
+    -fx-border-width: 1px;
+    -fx-background-radius: 5px;
+}
+
+.text-area {
+    -fx-prev-height: 500px;
+    -fx-font-family: 'EB Garamond';
+    -fx-font-size: 17px;
+}
+
+#cardsView {
+    -fx-font-family: 'EB Garamond';
+    -fx-font-size: 14px;
+}
+
+#drillOver {
+    -fx-font-family: 'EB Garamond';
+    -fx-text-fill: #002642;
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+}

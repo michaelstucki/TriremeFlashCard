@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+
+<VBox stylesheets="@../css/styles.css" alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.michaelstucki.triremeflashcards.controller.ControllerCards">
+    <padding>
+        <Insets right="50.0" bottom="50.0" left="50.0" />
+    </padding>
+
+    <ImageView fitWidth="180" fitHeight="180" preserveRatio="true">
+        <Image url="@../images/trireme.png"/>
+    </ImageView>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="Deck"/>
+        <Label fx:id="deckName"/>
+    </HBox>
+
+    <SplitPane dividerPositions="0.5, 0.5">
+        <VBox alignment="CENTER" spacing="15">
+            <padding><Insets topRightBottomLeft="10"/></padding>
+            <TextArea fx:id="front" prefHeight="500"/>
+            <TextArea fx:id="back" prefHeight="500"/>
+            <HBox alignment="CENTER" spacing="10">
+                <Button fx:id="save" text="Save" onAction="#saveClick"/>
+                <Button fx:id="cancel" text="Cancel" onAction="#cancelClick"/>
+            </HBox>
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="10">
+            <padding><Insets topRightBottomLeft="20"/></padding>
+            <ListView fx:id="cardsView" layoutX="10.0" layoutY="10.0">
+                <tooltip><Tooltip text="Right-click to Add, Edit, or Delete."/></tooltip>
+                <ContextMenu fx:id="itemContextMenu">
+                    <items>
+                        <MenuItem fx:id="add" text="add"/>
+                        <MenuItem fx:id="edit" text="edit"/>
+                        <MenuItem fx:id="delete" text="delete"/>
+                    </items>
+                </ContextMenu>
+            </ListView>
+        </VBox>
+    </SplitPane>
+
+    <VBox alignment="CENTER" spacing="5">
+        <Hyperlink text="welcome" onAction="#welcomeClick"/>
+        <Hyperlink text="decks" onAction="#decksClick"/>
+        <Hyperlink text="exit" onAction="#exitClick"/>
+    </VBox>
+</VBox>
